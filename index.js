@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const db = require('./firebaseConfig'); // Conexión a Firebase
+const db = require('./firebaseConfig'); // Archivo de configuración de Firebase
 
 const app = express();
 app.use(cors());
@@ -62,7 +62,7 @@ app.post('/api/register', async (req, res) => {
 });
 
 // Iniciar servidor
-const PORT = process.env.PORT || 5000; // Usa el puerto de Render o 5000 como fallback
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
